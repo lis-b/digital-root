@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  cursor: default;
+}
+*::selection {
+  background: #000000;
+  color: #ffffff;
+}
+*::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+}
+*::-webkit-selection {
+  background: #000000;
+  color: #ffffff;
+}
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Syne Mono", monospace;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  position: relative;
+}
+
+div#calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+span[class^=num-],
+span.txt {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  font-size: 50px;
+  cursor: pointer;
+  color: #dddddd;
+  background: #333333;
+  border: 0;
+  display: inline-block;
+  line-height: 100px;
+  text-align: center;
+}
+span[class^=num-]::selection,
+span.txt::selection {
+  background: #333333;
+  color: #dddddd;
+}
+span[class^=num-]::-moz-selection,
+span.txt::-moz-selection {
+  background: #333333;
+  color: #dddddd;
+}
+span[class^=num-]::-webkit-selection,
+span.txt::-webkit-selection {
+  background: #333333;
+  color: #dddddd;
+}
+span[class^=num-]:hover,
+span.txt:hover {
+  background: #3C3C3C;
+}
+span[class^=num-]:hover::selection,
+span.txt:hover::selection {
+  background: #3C3C3C;
+  color: #dddddd;
+}
+span[class^=num-]:hover::-moz-selection,
+span.txt:hover::-moz-selection {
+  background: #3C3C3C;
+  color: #dddddd;
+}
+span[class^=num-]:hover::-webkit-selection,
+span.txt:hover::-webkit-selection {
+  background: #3C3C3C;
+  color: #dddddd;
+}
+span[class^=num-]:active,
+span.txt:active {
+  background: #2C2C2C;
+}
+span[class^=num-]:active::selection,
+span.txt:active::selection {
+  background: #2C2C2C;
+  color: #dddddd;
+}
+span[class^=num-]:active::-moz-selection,
+span.txt:active::-moz-selection {
+  background: #2C2C2C;
+  color: #dddddd;
+}
+span[class^=num-]:active::-webkit-selection,
+span.txt:active::-webkit-selection {
+  background: #2C2C2C;
+  color: #dddddd;
+}
+
+div#buttons {
+  width: 416px;
+}
+
+div#numbers {
+  width: 312px;
+  height: 416px;
+  float: left;
+}
+div#numbers span[class^=num-] {
+  float: right;
+}
+div#numbers span.num-0 {
+  float: left;
+}
+
+div#operations {
+  width: 104px;
+  height: 416px;
+  float: right;
+}
+div#operations span.clear {
+  background: #4d4d4d;
+  color: #f7f7f7;
+}
+div#operations span.clear::selection {
+  background: #4d4d4d;
+  color: #f7f7f7;
+}
+div#operations span.clear::-moz-selection {
+  background: #4d4d4d;
+  color: #f7f7f7;
+}
+div#operations span.clear::-webkit-selection {
+  background: #4d4d4d;
+  color: #f7f7f7;
+}
+div#operations span.clear:hover {
+  background: #565656;
+}
+div#operations span.clear:hover::selection {
+  background: #565656;
+  color: #f7f7f7;
+}
+div#operations span.clear:hover::-moz-selection {
+  background: #565656;
+  color: #f7f7f7;
+}
+div#operations span.clear:hover::-webkit-selection {
+  background: #565656;
+  color: #f7f7f7;
+}
+div#operations span.clear:active {
+  background: #464646;
+}
+div#operations span.clear:active::selection {
+  background: #464646;
+  color: #f7f7f7;
+}
+div#operations span.clear:active::-moz-selection {
+  background: #464646;
+  color: #f7f7f7;
+}
+div#operations span.clear:active::-webkit-selection {
+  background: #464646;
+  color: #f7f7f7;
+}
+div#operations span.add {
+  height: 204px;
+  line-height: 204px;
+}
+div#operations span.dr {
+  width: 308px;
+  float: right;
+  font-size: 37.5px;
+}

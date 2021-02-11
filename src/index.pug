@@ -1,0 +1,29 @@
+- var n = 9
+
+doctype html
+html
+  head
+    title digital root calculator
+
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(rel="stylesheet", type="text/css",
+         href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap")
+
+    link(rel="stylesheet", type="text/css", href="./files/reset.min.css")
+    link(rel="stylesheet", type="text/css", href="./files/style.css")
+
+  body
+    div#calculator
+      div#screen
+        div#prev
+        input(type="text")
+
+      div#buttons
+        div#numbers
+          while n >= 0
+            span(class="num-" + n)= n--
+
+        div#operations
+          span(class="txt clear") C
+          span(class="txt add") +
+          span(class="txt dr") digital root

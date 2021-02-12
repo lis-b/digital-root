@@ -6,17 +6,16 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Syne+Mono&amp;display=swap">
     <link rel="stylesheet" type="text/css" href="./files/reset.min.css">
     <link rel="stylesheet" type="text/css" href="./files/style.css">
+    <script type="text/javascript" src="./files/script.js" defer></script>
   </head>
   <body>
-    <div id="calculator">
-      <div id="screen">
-        <div id="prev"></div>
-        <input type="text">
-      </div>
-      <div id="buttons">
-        <div id="numbers"><span class="num-9">9</span><span class="num-8">8</span><span class="num-7">7</span><span class="num-6">6</span><span class="num-5">5</span><span class="num-4">4</span><span class="num-3">3</span><span class="num-2">2</span><span class="num-1">1</span><span class="num-0">0</span>
+    <div id="wrapper">
+      <div class="calculator">
+        <div class="screen">
+          <div class="prev" data-prev></div>
+          <div class="curr" data-curr></div>
         </div>
-        <div id="operations"><span class="txt clear">C</span><span class="txt add">+</span><span class="txt dr">digital root</span></div>
+        <div class="buttons"><span data-number>7</span><span data-number>8</span><span data-number>9</span><span data-clear>C</span><span data-number>4</span><span data-number>5</span><span data-number>6</span><span data-clear-entry>CE</span><span data-number>1</span><span data-number>2</span><span data-number>3</span><span data-add>+</span><span data-number>0</span><span class="triple small-font" data-dr>digital root</span></div>
       </div>
     </div>
   </body>

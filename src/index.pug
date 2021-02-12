@@ -1,5 +1,3 @@
-- var n = 9
-
 doctype html
 html
   head
@@ -12,18 +10,27 @@ html
     link(rel="stylesheet", type="text/css", href="./files/reset.min.css")
     link(rel="stylesheet", type="text/css", href="./files/style.css")
 
+    script(type="text/javascript", src="./files/script.js", defer)
+
   body
-    div#calculator
-      div#screen
-        div#prev
-        input(type="text")
+    div#wrapper
+      div.calculator
+        div.screen
+          div.prev(data-prev)
+          div.curr(data-curr)
 
-      div#buttons
-        div#numbers
-          while n >= 0
-            span(class="num-" + n)= n--
-
-        div#operations
-          span(class="txt clear") C
-          span(class="txt add") +
-          span(class="txt dr") digital root
+        div.buttons
+          span(data-number) 7
+          span(data-number) 8
+          span(data-number) 9
+          span(data-clear) C
+          span(data-number) 4
+          span(data-number) 5
+          span(data-number) 6
+          span(data-clear-entry) CE
+          span(data-number) 1
+          span(data-number) 2
+          span(data-number) 3
+          span(data-add) +
+          span(data-number) 0
+          span.triple.small-font(data-dr) digital root

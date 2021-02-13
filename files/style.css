@@ -1,16 +1,20 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   cursor: default;
 }
-*::selection, *::before::selection, *::after::selection {
+
+*::-moz-selection,
+*::before::-moz-selection,
+*::after::-moz-selection {
   background: transparent;
   color: inherit;
 }
-*::-moz-selection, *::before::-moz-selection, *::after::-moz-selection {
-  background: transparent;
-  color: inherit;
-}
-*::-webkit-selection, *::before::-webkit-selection, *::after::-webkit-selection {
+
+*::selection,
+*::before::selection,
+*::after::selection {
   background: transparent;
   color: inherit;
 }
@@ -23,7 +27,7 @@ div#wrapper {
 }
 
 body {
-  background: #000000;
+  background: #000;
   font-family: "Syne Mono", monospace;
 }
 
@@ -32,14 +36,15 @@ div#wrapper {
   justify-content: center;
   align-content: center;
 }
+
 div#wrapper div.calculator {
-  background: #444444;
+  background: #444;
   padding: 5px;
 }
 
 div.screen {
-  background: #222222;
-  color: #ffffff;
+  background: #222;
+  color: #fff;
   margin-bottom: 5px;
   padding: 10px;
   text-align: right;
@@ -47,16 +52,31 @@ div.screen {
   word-break: break-all;
   max-width: 415px;
 }
+
 div.screen div.prev {
   opacity: 0.5;
   font-size: 25px;
 }
+
 div.screen div.curr {
   font-size: 50px;
 }
+
 div.screen div.prev,
 div.screen div.curr {
   min-height: 1em;
+}
+
+div.screen div.prev::-moz-selection,
+div.screen div.curr::-moz-selection {
+  background: transparent;
+  color: inherit;
+}
+
+div.screen div.prev::selection,
+div.screen div.curr::selection {
+  background: transparent;
+  color: inherit;
 }
 
 div.buttons {
@@ -68,38 +88,41 @@ div.buttons {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
+
 div.buttons span {
   outline: none;
   cursor: pointer;
-  color: #dddddd;
-  background: #333333;
+  color: #ddd;
+  background: #333;
   border: 0;
   font-size: 50px;
   display: inline-block;
   line-height: 100px;
   text-align: center;
 }
-div.buttons span::selection {
-  background: transparent;
-  color: inherit;
-}
+
 div.buttons span::-moz-selection {
   background: transparent;
   color: inherit;
 }
-div.buttons span::-webkit-selection {
+
+div.buttons span::selection {
   background: transparent;
   color: inherit;
 }
+
 div.buttons span.triple {
   grid-column: span 3;
 }
+
 div.buttons span.small-font {
   font-size: 37.5px;
 }
+
 div.buttons span:hover {
-  background: #3C3C3C;
+  background: #3c3c3c;
 }
+
 div.buttons span:active {
-  background: #2C2C2C;
+  background: #2c2c2c;
 }

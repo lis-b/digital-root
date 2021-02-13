@@ -1,3 +1,5 @@
+@use 'mixins' as *
+
 // -------- COLORS
 $background: #000000
 $text-color: #ffffff
@@ -9,8 +11,8 @@ $screen-text: #ffffff
 
 $button-bg:   #333333
 $button-text: #dddddd
-$button-bg-hover:  #3C3C3C
-$button-bg-active: #2C2C2C
+$button-bg-hover:  #3c3c3c
+$button-bg-active: #2c2c2c
 $clear-lighter: 10%
 
 // -------- FONTS
@@ -24,32 +26,6 @@ $xs-size:    $large-size / 2
 $button-size:   100px
 $button-margin: 5px
 
-// -------- MIXINS
-@mixin selection($bg, $txt)
-  &::selection
-    background: $bg
-    color: $txt
-  &::-moz-selection
-    background: $bg
-    color: $txt
-  &::-webkit-selection
-    background: $bg
-    color: $txt
-
-@mixin transition($args...)
-  transition: $args
-  -o-transition: $args
-  -ms-transition: $args
-  -moz-transition: $args
-  -webkit-transition: $args
-
-@mixin translate($x, $y)
-  transform: translate($x, $y)
-  -o-transform: translate($x, $y)
-  -ms-transform: translate($x, $y)
-  -moz-transform: translate($x, $y)
-  -webkit-transform: translate($x, $y)
-
 // -------- STYLES
 *
   &,
@@ -57,7 +33,7 @@ $button-margin: 5px
   &::after
     box-sizing: border-box
     cursor: default
-    @include selection(transparent, inherit)
+    @include selection-none
 
 html,
 body,
@@ -99,6 +75,7 @@ div.screen
   div.prev,
   div.curr
     min-height: 1em
+    @include selection-none
 
 div.buttons
   display: grid
@@ -116,10 +93,10 @@ div.buttons
     background: $button-bg
     border: 0
     font-size: $large-size
-    @include selection(transparent, inherit)
     display: inline-block
     line-height: $button-size
     text-align: center
+    @include selection-none
 
     &.triple
       grid-column: span 3

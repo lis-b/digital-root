@@ -1,0 +1,7 @@
+@mixin selection($bg, $txt)
+  &::selection
+    background: $bg
+    color: $txt
+
+@mixin selection-none
+  @include selection(transparent, inherit)

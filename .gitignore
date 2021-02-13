@@ -1,3 +1,5 @@
 .test
 .DS_Store
 Makefile
+.sass-cache
+.stylelintrc.json
